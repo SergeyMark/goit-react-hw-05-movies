@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
+import css from './Movies.module.css';
 
 export const Movies = () => {
     const [movies, setMovies] = useState([]);
@@ -23,6 +23,7 @@ export const Movies = () => {
         const inputValue = event.currentTarget.elements.search.value;
         if (inputValue.trim() === '') {
             setSearchParams({});
+            alert('oppsss...')
             return;
         }
         setSearchParams({ searchQuery: inputValue });
@@ -41,17 +42,18 @@ export const Movies = () => {
 
     return(
         <>
-            <form onSubmit={handleSubmit}>
+            <form className={css.Form} onSubmit={handleSubmit}>
               <input
                 type="text"
                 autoComplete="off"
                 name="search"
                 autoFocus
                 placeholder="Search Movies"
+                className={css.Input}
               />
-              <button type="submit">Search</button>
+              <button className={css.Btn} type="submit">Search</button>
             </form>
-            <ul>
+            <ul className={css.ListMovie}>
                {movies.map((movie) => {
 
                     let imagePath;
@@ -62,7 +64,7 @@ export const Movies = () => {
                     }
 
                  return(
-                    <li key={movie.id}>
+                    <li className={css.ItemMovie} key={movie.id}>
                         <Link to={`${movie.id}`} state={{from: location}}>
                             <div>
                                 <img src={imagePath} alt="poster" width={350} />

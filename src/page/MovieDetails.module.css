@@ -1,0 +1,41 @@
+.Back{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.Container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ContainerImg{
+    width: 450px;
+}
+
+.ContainerInfo{
+    width: 450px;
+}
+
+.ContainerInformation{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.Information{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ListInformation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

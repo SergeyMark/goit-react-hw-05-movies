@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FeatchMovie } from "components/FetchMovie";
 
+import css from './Home.module.css';
+
 export const Home = () => {
     const [movieCards, setMovieCards] = useState([]);
 
@@ -17,8 +19,8 @@ export const Home = () => {
 
     return(
         <>
-            <h1>Trending</h1>
-            <ul>
+            <h1 className={css.HeaderTitle}>Trending Movies</h1>
+            <ul className={css.ListHome}>
                {movieCards.map((movieCard) => {
 
                     let imagePath;
@@ -29,10 +31,10 @@ export const Home = () => {
                     }
 
                  return(
-                    <li key={movieCard.id}>
-                        <Link to={`movies/${movieCard.id}`} state={{from: location}}>
+                    <li className={css.ListItem} key={movieCard.id}>
+                        <Link to={`movie/${movieCard.id}`} state={{from: location}}>
                             <div>
-                                <img src={imagePath} alt="poster" width={350} />
+                                <img src={imagePath} alt="poster" />
                             </div>
                             <h3>{movieCard.title}</h3>
                         </Link>

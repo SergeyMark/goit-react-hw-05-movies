@@ -1,0 +1,17 @@
+.NavHeader{
+    padding: 25px;
+    background-color: deepskyblue;
+}
+
+.ListHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ItemHeader{
+    color: #fff;
+    font-weight: 900;
+    font-size: 20px;
+}
