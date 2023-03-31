@@ -11,4 +11,12 @@ export async function FeatchMovie(endPoint) {
 }
 
 
+export async function FeatchSearch(searchQuery) {
+    const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${searchQuery}`;
+
+    const resp = await axios.get(BASE_URL);
+
+    return resp;
+}
+
 

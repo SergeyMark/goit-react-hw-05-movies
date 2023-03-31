@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 export const Layout = () => {
     return(
@@ -11,7 +11,9 @@ export const Layout = () => {
                     </ul>
                 </nav>
             </header>
-            <main></main>
+            <main>
+                <Outlet/>
+            </main>
         </>
     )
 } 
