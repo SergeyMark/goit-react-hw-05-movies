@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 import css from './MovieDetails.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [overview, setOverview] = useState('');
@@ -73,3 +73,5 @@ export const MovieDetails = () => {
         </>
     )
 }
+
+export default MovieDetails;

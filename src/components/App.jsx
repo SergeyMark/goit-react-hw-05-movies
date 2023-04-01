@@ -1,19 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 
-// import Layout  from './Layout';
 import { Home } from '../page/Home';
 import { Movies } from '../page/Movies';
-import { MovieDetails } from '../page/MovieDetails';
 import { Cast } from './Cast';
 import { Reviews } from './Reviews';
 
 const Layout = lazy(() => import('./Layout'));
-// const MovieDetails = lazy(() => import('../page/MovieDetails'));
-// const Home = lazy(() => import('../page/Home'));
-// const Movies = lazy(() => import('../page/Movies'));
-// const Cast = lazy(() => import('./Cast'));
-// const Reviews = lazy(() => import('./Reviews'));
+const MovieDetails = lazy(() => import('../page/MovieDetails'));
+
 
 
 export const App = () => {
@@ -30,3 +25,16 @@ export const App = () => {
       </Routes>
   );
 };
+
+
+
+
+
+// import Layout  from './Layout';
+// import  MovieDetails  from '../page/MovieDetails';
+
+
+// const Home = lazy(() => import('../page/Home'));
+// const Movies = lazy(() => import('../page/Movies'));
+// const Cast = lazy(() => import('./Cast'));
+// const Reviews = lazy(() => import('./Reviews'));
