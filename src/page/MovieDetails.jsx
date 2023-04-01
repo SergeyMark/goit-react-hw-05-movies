@@ -1,6 +1,6 @@
 import { FeatchMovie } from "components/FetchMovie";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useParams, useLocation } from "react-router-dom";
 import { useRef } from "react";
@@ -31,6 +31,7 @@ export const MovieDetails = () => {
 
     return(
         <>
+            
             <Link className={css.Back} to={backLinkHref.current}>Back</Link>
             <div className={css.Container}>
                 <div className={css.ContainerImg}>
@@ -65,7 +66,9 @@ export const MovieDetails = () => {
                     </li>
                 </ul>
             </div>
-            <Outlet />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Outlet />
+            </Suspense>
         </>
     )
 }
