@@ -1,9 +1,10 @@
 import { FeatchMovie } from "components/FetchMovie";
 
-import { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useParams, useLocation } from "react-router-dom";
 import { useRef } from "react";
+import { Suspense } from "react";
 
 import css from './MovieDetails.module.css';
 
