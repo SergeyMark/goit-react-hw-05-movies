@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 import css from './Layout.module.css';
 
-const Layout = () => {
+export const Layout = () => {
     return(
         <>
             <header className={css.NavHeader}>
@@ -22,5 +22,3 @@ const Layout = () => {
         </>
     )
 } 
-
-export default Layout;

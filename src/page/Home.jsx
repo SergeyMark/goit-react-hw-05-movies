@@ -4,7 +4,7 @@ import { FeatchMovie } from "components/FetchMovie";
 
 import css from './Home.module.css';
 
-export const Home = () => {
+const Home = () => {
     const [movieCards, setMovieCards] = useState([]);
 
     const location = useLocation();
@@ -45,3 +45,5 @@ export const Home = () => {
         </>
     )
 }
+
+export default Home;
