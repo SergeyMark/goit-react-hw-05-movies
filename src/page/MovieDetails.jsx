@@ -18,7 +18,7 @@ const MovieDetails = () => {
     const { movieId } = useParams();
     const location = useLocation();
 
-    const backLinkHref = useRef(location.state?.from ?? '/movies');
+    const backLinkHref = useRef(location.state?.from ?? '/movie');
 
     useEffect(()=>{
         FeatchMovie(`movie/${movieId}`).then(resp=>{
